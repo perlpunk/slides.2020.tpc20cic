@@ -1,0 +1,6 @@
+---
+billing address: &address
+  street:  Santa Claus Lane North Pole
+  zip:     '99705'
+  country: Alaska
+shipping address: *address

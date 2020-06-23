@@ -1,0 +1,5 @@
+# This will set $YAML::LoadCode to true!
+--- !!perl/glob
+PACKAGE: YAML
+NAME: LoadCode
+SCALAR: 1

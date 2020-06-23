@@ -1,0 +1,10 @@
+---
+# Before only this
+# could be parsed
+
+-
+  - a
+  - b
+-
+  - c
+  - d

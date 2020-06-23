@@ -1,0 +1,4 @@
+--- # YAML
+Outputs:
+  MyOutput:
+    Value: !Join [ '%', [ 'A-string', !Ref 'AWS::StackName' ]]

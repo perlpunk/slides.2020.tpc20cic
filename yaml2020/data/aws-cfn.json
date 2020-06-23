@@ -1,0 +1,9 @@
+# JSON
+{ "Outputs" : {
+    "MyOutput" : {
+      "Value" : { "Fn::Join" :
+        [ "%", [ "A-string", {"Ref" : "AWS::StackName" } ] ]
+      }
+    }
+  }
+}

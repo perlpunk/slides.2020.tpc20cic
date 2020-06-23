@@ -1,0 +1,11 @@
+---
+defaults:
+  a: default A
+  b: default B
+
+# ...
+
+thing:
+  a: override A
+  b: default B
+  c: add C

@@ -1,0 +1,8 @@
+--- # Document 1
+a: 1
+b: 2
+
+--- # Document 2
+- a
+- b
+- c
