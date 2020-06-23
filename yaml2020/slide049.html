@@ -23,7 +23,7 @@
 use YAML::PP::Schema::Include;
 <span id="node_3">my $include = YAML::PP::Schema::Include-&gt;new;</span>
 
-<span id="node_4">my $yp = YAML::PP-&gt;new( <span id="node_5" style="color: #44aacc">[&#39;+&#39;, $include ]</span> );</span>
+<span id="node_4">my $yp = YAML::PP-&gt;new( <span id="node_5" style="color: #44aacc">schema =&gt; [&#39;+&#39;, $include ]</span> );</span>
 
 <span id="node_6"># still needed to make the include object aware
 # of the YAML::PP object

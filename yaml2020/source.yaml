@@ -602,7 +602,7 @@ content: |
   use YAML::PP::Schema::Include;
   [span animation=1,appear]my $include = YAML::PP::Schema::Include->new;[/span]
 
-  [span animation=2,appear]my $yp = YAML::PP->new( [color=#44aacc]['+', $include ][/color] );[/span]
+  [span animation=2,appear]my $yp = YAML::PP->new( [color=#44aacc]schema => ['+', $include ][/color] );[/span]
 
   [span animation=3,appear]# still needed to make the include object aware
   # of the YAML::PP object
