@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>YAML::PP - Only load certain classes</title>
+<link rel="prev" href="slide072.html" />
+<link rel="next" href="slide074.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Only load certain classes</h1>
+<div id="node_2" class="codebox">
+use YAML::PP;
+use YAML::PP::Schema::Perl;
+my $perl = YAML::PP::Schema::Perl-&gt;new(
+    <span id="node_3" style="color: #44aacc">classes =&gt; [qw/ My::Class::X My::Class::Y /]</span>,
+);
+my $yp = YAML::PP-&gt;new(
+    # enable references, regexes and objects
+    <span id="node_4" style="color: #44aacc">schema =&gt; [&#39;+&#39;, $perl]</span>,
+);
+</div>
+</div>
+<script type="text/javascript">
+register_animation('node_2', 1, 'appear', {});
+
+var prev_page = 'slide072.html';
+var next_page = 'slide074.html';
+</script>
+<div id="bbslides-navi">
+Slide 73/88
+<a href="slide072.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide074.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="73" max="88"></progress>
+</div>
+</body>
+</html>

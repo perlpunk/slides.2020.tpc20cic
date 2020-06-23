@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>YAML::PP - Include options</title>
+<link rel="prev" href="slide078.html" />
+<link rel="next" href="slide080.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Include options</h1>
+<ul><li id="node_3">Allows nested includes, but not cyclic</li><li id="node_4">Searches relative to current YAML file</li></ul>
+<div id="node_5" class="codebox">
+<span id="node_6">my $include = YAML::PP::Schema::Include-&gt;new(
+    # allow !include /etc/passwd
+    # or !include ../../../../etc/passwd
+    <span id="node_7" style="color: #44aacc">allow_absolute =&gt; 1</span>,
+);</span>
+
+<span id="node_8">my $include = YAML::PP::Schema::Include-&gt;new(
+    <span id="node_9" style="color: #44aacc">paths =&gt; [ qw( /path/prefix ) ]</span>,
+);</span>
+
+</div>
+<span id="node_10"><span style="font-size: 80"><span id="node_12" style="color: green">🙂</span></span></span>
+</div>
+<script type="text/javascript">
+register_animation('node_6', 1, 'appear', {});
+register_animation('node_8', 2, 'appear', {});
+register_animation('node_10', 5, 'appear', {});
+
+var prev_page = 'slide078.html';
+var next_page = 'slide080.html';
+</script>
+<div id="bbslides-navi">
+Slide 79/88
+<a href="slide078.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide080.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="79" max="88"></progress>
+</div>
+</body>
+</html>

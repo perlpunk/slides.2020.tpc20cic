@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>YAML::PP - Merge Keys</title>
+<link rel="prev" href="slide074.html" />
+<link rel="next" href="slide076.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Merge Keys</h1>
+<div id="node_2" class="codebox"><span class="doc_start">---</span><span class="eol">
+</span><span class="plainkey">defaults</span><span class="colon">:</span><span class="default"> </span><span class="anchor">&amp;defaults</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="default">default A</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="default">default B</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol"># ...
+</span><span class="eol">
+</span><span class="plainkey">thing</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">&lt;&lt;</span><span class="colon">:</span><span class="default"> </span><span class="alias">*defaults</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="default">override A</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">c</span><span class="colon">:</span><span class="default"> </span><span class="default">add C</span><span class="eol">
+</span></div>
+<div id="node_4" class="codebox"><span class="doc_start">---</span><span class="eol">
+</span><span class="plainkey">defaults</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="default">default A</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="default">default B</span><span class="eol">
+</span><span class="eol">
+</span><span class="eol"># ...
+</span><span class="eol">
+</span><span class="plainkey">thing</span><span class="colon">:</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">a</span><span class="colon">:</span><span class="default"> </span><span class="default">override A</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">b</span><span class="colon">:</span><span class="default"> </span><span class="default">default B</span><span class="eol">
+</span><span class="default">  </span><span class="plainkey">c</span><span class="colon">:</span><span class="default"> </span><span class="default">add C</span><span class="eol">
+</span></div>
+</div>
+<script type="text/javascript">
+register_animation('node_2', 1, 'appear', {});
+register_animation('node_4', 2, 'appear', {});
+
+var prev_page = 'slide074.html';
+var next_page = 'slide076.html';
+</script>
+<div id="bbslides-navi">
+Slide 75/88
+<a href="slide074.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide076.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="75" max="88"></progress>
+</div>
+</body>
+</html>

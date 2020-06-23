@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>YAML::PP - Include other YAML Files</title>
+<link rel="prev" href="slide077.html" />
+<link rel="next" href="slide079.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Include other YAML Files</h1>
+<div id="node_2" class="codebox">use YAML::PP;
+use YAML::PP::Schema::Include;
+<span id="node_3">my $include = YAML::PP::Schema::Include-&gt;new;</span>
+
+<span id="node_4">my $yp = YAML::PP-&gt;new( <span id="node_5" style="color: #44aacc">[&#39;+&#39;, $include ]</span> );</span>
+
+<span id="node_6"># still needed to make the include object aware
+# of the YAML::PP object
+$include-&gt;yp($yp);</span>
+</div>
+</div>
+<script type="text/javascript">
+register_animation('node_3', 1, 'appear', {});
+register_animation('node_4', 2, 'appear', {});
+register_animation('node_6', 3, 'appear', {});
+
+var prev_page = 'slide077.html';
+var next_page = 'slide079.html';
+</script>
+<div id="bbslides-navi">
+Slide 78/88
+<a href="slide077.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide079.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="78" max="88"></progress>
+</div>
+</body>
+</html>
