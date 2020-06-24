@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Options</title>
+<title>Benchmarks</title>
 <link rel="prev" href="slide033.html" />
 <link rel="next" href="slide035.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,28 +18,30 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Options</h1>
-<ul><li id="node_3">What can be problematic with this?</li></ul>
-<div id="node_4"><div id="node_5" class="codebox">---
-cycle: <span id="node_6" style="color: green">&amp;node</span> [ x, y, <span id="node_7" style="color: green">*node</span> ]
-</div></div>
-<div id="node_8"><div id="node_9" class="codebox">$VAR1 = {
-  &#39;cycle&#39; =&gt; [ &#39;x&#39;, &#39;y&#39;, $VAR1-&gt;{&#39;cycle&#39;} ]
-};
-</div></div>
-<ul><li id="node_11">Cyclic references can cause memory leaks</li></ul>
-<span id="node_12"><span style="font-size: 80"><span id="node_14" style="color: red">😠</span></span></span>
+<h1 id="node_1" class="bbslides-h1">Benchmarks</h1>
+<div id="node_2" class="codebox">
+Load:
+<span id="node_3">YAML::PP          <span style="font-size: 20">################################################################# 65ms</span></span>
+<span id="node_5">YAML.pm           <span style="font-size: 20">######################################### 41.4ms</span></span>
+<span id="node_7">YAML::PP::LibYAML <span style="font-size: 20">########## 10.2ms</span></span>
+<span id="node_9">YAML::Tiny        <span style="font-size: 20">####### 7.3ms</span></span>
+<span id="node_11">YAML::Syck        <span style="font-size: 20"># 1.25ms</span></span>
+<span id="node_13">YAML::XS          <span style="font-size: 20"># 1ms</span></span>
+</div>
 </div>
 <script type="text/javascript">
-register_animation('node_8', 6, 'appear', {});
-register_animation('node_11', 11, 'appear', {});
-register_animation('node_12', 15, 'appear', {});
+register_animation('node_3', 1, 'appear', {});
+register_animation('node_5', 2, 'appear', {});
+register_animation('node_7', 3, 'appear', {});
+register_animation('node_9', 4, 'appear', {});
+register_animation('node_11', 5, 'appear', {});
+register_animation('node_13', 6, 'appear', {});
 
 var prev_page = 'slide033.html';
 var next_page = 'slide035.html';
 </script>
 <div id="bbslides-navi">
-Slide 34/59
+Slide 34/61
 <a href="slide033.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide035.html" onclick="next_step(); return false">NEXT</a>
@@ -48,7 +50,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="34" max="59"></progress>
+<progress id="slide-progress" value="34" max="61"></progress>
 </div>
 </body>
 </html>

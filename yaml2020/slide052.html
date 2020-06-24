@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Add your own constructor</title>
+<title>YAML::PP - Include options</title>
 <link rel="prev" href="slide051.html" />
 <link rel="next" href="slide053.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,34 +18,32 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Add your own constructor</h1>
-<div id="node_2" class="codebox">$yp-&gt;schema-&gt;add_resolver(
-    tag =&gt; &quot;tag:yaml.org,2002:int&quot;,
-    match =&gt; [ regex
-<span id="node_3">        =&gt; <span id="node_4" style="color: #44aacc">qr/^ ([IVXLCM]+) \z/x</span></span>
-<span id="node_5">        =&gt; <span id="node_6" style="color: #44aacc">sub {</span>
-            return {
-                I =&gt;1, II =&gt;2, III =&gt;3, IV=&gt;4, V=&gt;5,
-                VI=&gt;6, VII=&gt;7, VIII=&gt;8, IX=&gt;9, X=&gt;10,
-            }-&gt;{ $_[0] };
-        <span id="node_7" style="color: #44aacc">}</span>],</span>
-<span id="node_8">    <span id="node_9" style="color: #44aacc">implicit</span> =&gt; 1, # allow matching without tag</span>
-);</div>
-<div id="node_10"><div id="node_11" class="codebox">---
-- VII # seven
-- 7   # and another seven</div></div>
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Include options</h1>
+<ul><li id="node_3">Allows nested includes, but not cyclic</li><li id="node_4">Searches relative to current YAML file</li></ul>
+<div id="node_5" class="codebox">
+<span id="node_6">my $include = YAML::PP::Schema::Include-&gt;new(
+    # allow !include /etc/passwd
+    # or !include ../../../../etc/passwd
+    <span id="node_7" style="color: #44aacc">allow_absolute =&gt; 1</span>,
+);</span>
+
+<span id="node_8">my $include = YAML::PP::Schema::Include-&gt;new(
+    <span id="node_9" style="color: #44aacc">paths =&gt; [ qw( /path/prefix ) ]</span>,
+);</span>
+
+</div>
+<span id="node_10"><span style="font-size: 80"><span id="node_12" style="color: green">🙂</span></span></span>
 </div>
 <script type="text/javascript">
-register_animation('node_3', 3, 'appear', {});
-register_animation('node_5', 4, 'appear', {});
-register_animation('node_8', 5, 'appear', {});
-register_animation('node_10', 10, 'appear', {});
+register_animation('node_6', 1, 'appear', {});
+register_animation('node_8', 2, 'appear', {});
+register_animation('node_10', 5, 'appear', {});
 
 var prev_page = 'slide051.html';
 var next_page = 'slide053.html';
 </script>
 <div id="bbslides-navi">
-Slide 52/59
+Slide 52/61
 <a href="slide051.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide053.html" onclick="next_step(); return false">NEXT</a>
@@ -54,7 +52,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="52" max="59"></progress>
+<progress id="slide-progress" value="52" max="61"></progress>
 </div>
 </body>
 </html>

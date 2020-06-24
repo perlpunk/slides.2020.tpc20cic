@@ -164,6 +164,19 @@ content: |
   [br]
   [codebox][include="documents.pl.html"][/codebox]
 
+
+---
+title: YAML Tutorial
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Most Tutorials out there have tiny mistakes or are missing stuff or are specific to YAML 1.1
+  [*]So I started to write another one two weeks ago
+  [*][url=https://www.yaml.info/]www.yaml.info[/url]
+  [*]The source is YAML (of course!)
+  [*]HTML is generated with perl (of course!)
+  [/list]
+
 ---
 title: Implementation - YAML Versions
 content: |
@@ -194,7 +207,7 @@ content: |
   [*]they interfere with syntax elements
   [*][codebox]- "- string"[/codebox]
   [*][codebox]- "some: string"[/codebox]
-  [*]or would be loaded as special values
+  [*]or would be loaded as [b]special values[/b]
   [/list]
 
 ---
@@ -252,6 +265,20 @@ content: |
   [/list]
 
 ---
+title: Implementation
+content: |
+  [title][/title]
+  [list animation="1,appear"]
+  [*]This works as long as you read/write the YAML with the same library/programming language
+  [*]YAML usage is growing
+  [*]It becomes more and more necessary to process YAML with different libraries
+  [*]Some YAML configuration files are even [b]generated[/b] with a library
+  instead of being handwritten.
+  [*]If they all behave differently, this is going to be a mess!
+  [/list]
+
+
+---
 title: But there is Hope!
 content: |
   [title][/title]
@@ -267,9 +294,10 @@ content: |
 title: YAML::PP - A new implementation
 content: |
   [title][/title]
-  [list]
+  [list animation="1,greyin"]
   [*]It's one of the first 3 implementations using the official YAML Test Suite
   [*]It's implemented modular and will make custom processing possible
+  [*]It aims to be optionally compatible with as many other libraries as possible
   [/list]
 
 ---

@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Preserve</title>
+<title>YAML::PP - Booleans</title>
 <link rel="prev" href="slide038.html" />
 <link rel="next" href="slide040.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,26 +18,31 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Preserve</h1>
-<ul><li id="node_3">Hash key order can be preserved when loading and dumping</li><li id="node_4">Implemented with tie()</li></ul>
-<div id="node_5">
-<div id="node_6" class="codebox">use YAML::PP::Common qw/ <span id="node_7" style="color: #44aacc">PRESERVE_ORDER</span> /;
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Booleans</h1>
+<div id="node_2" class="codebox">use YAML::PP;
 
-my $yp = YAML::PP-&gt;new( <span id="node_8" style="color: #44aacc">preserve =&gt; PRESERVE_ORDER</span> );
+<span id="node_3"># 1 / &#39;&#39;
+my $yp = YAML::PP-&gt;new( <span id="node_4" style="color: #44aacc">boolean =&gt; &#39;perl&#39;</span> );</span>
 
-say $yp-&gt;dump_string( $yp-&gt;load_string( $yaml ) );
-</div></div>
+<span id="node_5"># JSON::PP::true/false
+my $yp = YAML::PP-&gt;new( <span id="node_6" style="color: #44aacc">boolean =&gt; &#39;JSON::PP&#39;</span> );</span>
+
+<span id="node_7"># boolean::true/false
+my $yp = YAML::PP-&gt;new( <span id="node_8" style="color: #44aacc">boolean =&gt; &#39;boolean&#39;</span> );</span>
+</div>
 <span id="node_9"><span style="font-size: 80"><span id="node_11" style="color: green">🙂</span></span></span>
 </div>
 <script type="text/javascript">
-register_animation('node_5', 1, 'appear', {});
+register_animation('node_3', 1, 'appear', {});
+register_animation('node_5', 2, 'appear', {});
+register_animation('node_7', 3, 'appear', {});
 register_animation('node_9', 5, 'appear', {});
 
 var prev_page = 'slide038.html';
 var next_page = 'slide040.html';
 </script>
 <div id="bbslides-navi">
-Slide 39/59
+Slide 39/61
 <a href="slide038.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide040.html" onclick="next_step(); return false">NEXT</a>
@@ -46,7 +51,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="39" max="59"></progress>
+<progress id="slide-progress" value="39" max="61"></progress>
 </div>
 </body>
 </html>

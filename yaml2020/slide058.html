@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>Thanks</title>
+<title>YAML::PP - YAML 1.1 & 1.2</title>
 <link rel="prev" href="slide057.html" />
 <link rel="next" href="slide059.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,16 +18,47 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<span style="font-size: 80"><br>Thanks!<br>
-<span id="node_4" style="color: green">🙂</span></span>
+<h1 id="node_1" class="bbslides-h1">YAML::PP - YAML 1.1 &amp; 1.2</h1>
+<div id="node_2" class="codebox">my $yp = YAML::PP-&gt;new( <span id="node_3" style="color: #44aacc">yaml_version =&gt; [1.2, 1.1]</span> );</div>
+<div id="node_4"><div id="node_5" class="bbslides-horizontal">
+<div id="node_6" class="codebox"># Load as YAML 1.2
+
+---
+a: true
+</div>
+<div id="node_7" class="codebox"># Load as YAML 1.1
+<b>%YAML 1.1</b>
+---
+a: yes
+</div>
+</div>
+</div>
+<br>
+<div id="node_10"><div id="node_11" class="codebox">my $yp = YAML::PP-&gt;new( <span id="node_12" style="color: #44aacc">yaml_version =&gt; [1.1, 1.2]</span> );</div></div>
+<div id="node_13"><div id="node_14" class="bbslides-horizontal">
+<div id="node_15" class="codebox"># Load as YAML 1.1
+
+---
+a: yes
+</div>
+<div id="node_16" class="codebox"># Load as YAML 1.2
+<b>%YAML 1.2</b>
+---
+a: true
+</div>
+</div>
+</div>
 </div>
 <script type="text/javascript">
+register_animation('node_4', 2, 'appear', {});
+register_animation('node_10', 3, 'appear', {});
+register_animation('node_13', 4, 'appear', {});
 
 var prev_page = 'slide057.html';
 var next_page = 'slide059.html';
 </script>
 <div id="bbslides-navi">
-Slide 58/59
+Slide 58/61
 <a href="slide057.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide059.html" onclick="next_step(); return false">NEXT</a>
@@ -36,7 +67,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="58" max="59"></progress>
+<progress id="slide-progress" value="58" max="61"></progress>
 </div>
 </body>
 </html>

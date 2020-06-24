@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Include options</title>
+<title>YAML::PP - Include other YAML Files</title>
 <link rel="prev" href="slide049.html" />
 <link rel="next" href="slide051.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,32 +18,26 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Include options</h1>
-<ul><li id="node_3">Allows nested includes, but not cyclic</li><li id="node_4">Searches relative to current YAML file</li></ul>
-<div id="node_5" class="codebox">
-<span id="node_6">my $include = YAML::PP::Schema::Include-&gt;new(
-    # allow !include /etc/passwd
-    # or !include ../../../../etc/passwd
-    <span id="node_7" style="color: #44aacc">allow_absolute =&gt; 1</span>,
-);</span>
-
-<span id="node_8">my $include = YAML::PP::Schema::Include-&gt;new(
-    <span id="node_9" style="color: #44aacc">paths =&gt; [ qw( /path/prefix ) ]</span>,
-);</span>
-
-</div>
-<span id="node_10"><span style="font-size: 80"><span id="node_12" style="color: green">🙂</span></span></span>
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Include other YAML Files</h1>
+<div id="node_2"><div id="node_3" class="codebox">--- # invoice.yaml
+billing address:  <span id="node_4" style="color: green">!include </span><span id="node_5" style="color: blue">billing-address.yaml</span>
+shipping address: !include shipping-address.yaml
+</div></div><br>
+<div id="node_7"><div id="node_8" class="codebox">--- # <span id="node_9" style="color: blue">billing-address.yaml</span>
+street:  Santa Claus Lane North Pole
+zip:     &#39;99705&#39;
+country: Alaska
+</div></div>
 </div>
 <script type="text/javascript">
-register_animation('node_6', 1, 'appear', {});
-register_animation('node_8', 2, 'appear', {});
-register_animation('node_10', 5, 'appear', {});
+register_animation('node_2', 1, 'appear', {});
+register_animation('node_7', 2, 'appear', {});
 
 var prev_page = 'slide049.html';
 var next_page = 'slide051.html';
 </script>
 <div id="bbslides-navi">
-Slide 50/59
+Slide 50/61
 <a href="slide049.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide051.html" onclick="next_step(); return false">NEXT</a>
@@ -52,7 +46,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="50" max="59"></progress>
+<progress id="slide-progress" value="50" max="61"></progress>
 </div>
 </body>
 </html>

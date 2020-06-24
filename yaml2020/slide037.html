@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Booleans</title>
+<title>YAML::PP - Disable Cyclic References</title>
 <link rel="prev" href="slide036.html" />
 <link rel="next" href="slide038.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,17 +18,21 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Booleans</h1>
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Disable Cyclic References</h1>
 <div id="node_2" class="codebox">use YAML::PP;
 
-<span id="node_3"># 1 / &#39;&#39;
-my $yp = YAML::PP-&gt;new( <span id="node_4" style="color: #44aacc">boolean =&gt; &#39;perl&#39;</span> );</span>
+my $yp = YAML::PP-&gt;new(
 
-<span id="node_5"># JSON::PP::true/false
-my $yp = YAML::PP-&gt;new( <span id="node_6" style="color: #44aacc">boolean =&gt; &#39;JSON::PP&#39;</span> );</span>
+    <span id="node_3"># make it fatal
+    <span id="node_4" style="color: #44aacc">cyclic_refs =&gt; &#39;fatal&#39;</span>,</span>
 
-<span id="node_7"># boolean::true/false
-my $yp = YAML::PP-&gt;new( <span id="node_8" style="color: #44aacc">boolean =&gt; &#39;boolean&#39;</span> );</span>
+    <span id="node_5"># just load undef instead of ref and ignore
+    <span id="node_6" style="color: #44aacc">cyclic_refs =&gt; &#39;ignore&#39;</span>,</span>
+
+    <span id="node_7"># unfortunately no &#39;weaken&#39; option yet</span>
+    <span id="node_8"># it&#39;s complicated! ;-)</span>
+
+);
 </div>
 <span id="node_9"><span style="font-size: 80"><span id="node_11" style="color: green">🙂</span></span></span>
 </div>
@@ -36,13 +40,14 @@ my $yp = YAML::PP-&gt;new( <span id="node_8" style="color: #44aacc">boolean =&gt
 register_animation('node_3', 1, 'appear', {});
 register_animation('node_5', 2, 'appear', {});
 register_animation('node_7', 3, 'appear', {});
+register_animation('node_8', 4, 'appear', {});
 register_animation('node_9', 5, 'appear', {});
 
 var prev_page = 'slide036.html';
 var next_page = 'slide038.html';
 </script>
 <div id="bbslides-navi">
-Slide 37/59
+Slide 37/61
 <a href="slide036.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide038.html" onclick="next_step(); return false">NEXT</a>
@@ -51,7 +56,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="37" max="59"></progress>
+<progress id="slide-progress" value="37" max="61"></progress>
 </div>
 </body>
 </html>

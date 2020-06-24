@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>Benchmarks</title>
+<title>YAML::PP Implementation</title>
 <link rel="prev" href="slide031.html" />
 <link rel="next" href="slide033.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,30 +18,31 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">Benchmarks</h1>
-<div id="node_2" class="codebox">
-Load:
-<span id="node_3">YAML::PP          <span style="font-size: 20">################################################################# 65ms</span></span>
-<span id="node_5">YAML.pm           <span style="font-size: 20">######################################### 41.4ms</span></span>
-<span id="node_7">YAML::PP::LibYAML <span style="font-size: 20">########## 10.2ms</span></span>
-<span id="node_9">YAML::Tiny        <span style="font-size: 20">####### 7.3ms</span></span>
-<span id="node_11">YAML::Syck        <span style="font-size: 20"># 1.25ms</span></span>
-<span id="node_13">YAML::XS          <span style="font-size: 20"># 1ms</span></span>
+<h1 id="node_1" class="bbslides-h1">YAML::PP Implementation</h1>
+<div id="node_2" class="codebox">               ----- Syntax -----              ----- Schema -----
+<b>Load</b>:
+
+YAML Stream       Tokens        Event List        Data Structure
+          <span id="node_4" style="color: green"><b>--------&gt;    ---------&gt;        ---------&gt;</b></span>
+                lex/parse                   construct
+         YAML::PP::Lexer/Parser         YAML::PP::Constructor
+
+
+<b>Dump</b>:
+
+YAML Stream                   Event List           Data Structure
+            <span id="node_7" style="color: green"><b>&lt;------------------        &lt;---------------</b></span>
+                 emit                     represent
+         YAML::PP::Emitter             YAML::PP::Representer
 </div>
 </div>
 <script type="text/javascript">
-register_animation('node_3', 1, 'appear', {});
-register_animation('node_5', 2, 'appear', {});
-register_animation('node_7', 3, 'appear', {});
-register_animation('node_9', 4, 'appear', {});
-register_animation('node_11', 5, 'appear', {});
-register_animation('node_13', 6, 'appear', {});
 
 var prev_page = 'slide031.html';
 var next_page = 'slide033.html';
 </script>
 <div id="bbslides-navi">
-Slide 32/59
+Slide 32/61
 <a href="slide031.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide033.html" onclick="next_step(); return false">NEXT</a>
@@ -50,7 +51,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="32" max="59"></progress>
+<progress id="slide-progress" value="32" max="61"></progress>
 </div>
 </body>
 </html>

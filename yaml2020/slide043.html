@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Perl Types and Objects</title>
+<title>YAML::PP - Preserve</title>
 <link rel="prev" href="slide042.html" />
 <link rel="next" href="slide044.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,23 +18,24 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Perl Types and Objects</h1>
-<div id="node_2" class="codebox">
-use YAML::PP;
-my $yp = YAML::PP-&gt;new(
-    # enable references, regexes and objects
-    <span id="node_3" style="color: #44aacc">schema =&gt; [qw/ + Perl /]</span>,
-);
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Preserve</h1>
+<ul><li id="node_3">Quoting style can be preserved (still experimental)</li><li id="node_4">Scalars will be loaded as an object with overloading</li></ul>
+<div id="node_5" class="codebox">use YAML::PP::Common qw/ <span id="node_6" style="color: #44aacc">PRESERVE_SCALAR_STYLE</span> /;
+
+my $yp = YAML::PP-&gt;new( <span id="node_7" style="color: #44aacc">preserve =&gt; PRESERVE_SCALAR_STYLE</span> );
+
+say $yp-&gt;dump_string( $yp-&gt;load_string( $yaml ) );
 </div>
+<span id="node_8"><span style="font-size: 80"><span id="node_10" style="color: green">🙂</span></span></span>
 </div>
 <script type="text/javascript">
-register_animation('node_2', 1, 'appear', {});
+register_animation('node_8', 5, 'appear', {});
 
 var prev_page = 'slide042.html';
 var next_page = 'slide044.html';
 </script>
 <div id="bbslides-navi">
-Slide 43/59
+Slide 43/61
 <a href="slide042.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide044.html" onclick="next_step(); return false">NEXT</a>
@@ -43,7 +44,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="43" max="59"></progress>
+<progress id="slide-progress" value="43" max="61"></progress>
 </div>
 </body>
 </html>

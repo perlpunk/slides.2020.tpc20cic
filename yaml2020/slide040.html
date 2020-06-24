@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Preserve</title>
+<title>YAML::PP - Options</title>
 <link rel="prev" href="slide039.html" />
 <link rel="next" href="slide041.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,42 +18,36 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Preserve</h1>
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Options</h1>
 <div id="node_2" class="bbslides-horizontal">
 <div id="node_3" class="codebox">---
-<span id="node_4">- plain</span>
-<span id="node_5">- &#39;single quoted&#39;</span>
-<span id="node_6">- &quot;double quoted&quot;</span>
-<span id="node_7">- |-
-  literal block scalar</span>
+# Order should be preserved
+
+z: 1
+y: 2
+x: 3
 </div>
-<div id="node_8">Load | Dump</div>
-<div id="node_9" class="codebox">---
-<span id="node_10">- plain</span>
-<span id="node_11">- single quoted</span>
-<span id="node_12">- double quoted</span>
-<span id="node_13">- literal block scalar</span>
-</div>
+<div id="node_4">Load | Dump</div>
+<div id="node_5"><div id="node_6" class="codebox">---
+# Order is not preserved
+
+x: 3
+y: 2
+z: 1
+</div></div>
 </div>
 <br>
-<span id="node_15"><span style="font-size: 80"><span id="node_17" style="color: red">😠</span></span></span>
+<span id="node_8"><span style="font-size: 80"><span id="node_10" style="color: red">😠</span></span></span>
 </div>
 <script type="text/javascript">
-register_animation('node_4', 1, 'appear', {});
-register_animation('node_5', 2, 'appear', {});
-register_animation('node_6', 3, 'appear', {});
-register_animation('node_7', 4, 'appear', {});
-register_animation('node_10', 1, 'appear', {});
-register_animation('node_11', 2, 'appear', {});
-register_animation('node_12', 3, 'appear', {});
-register_animation('node_13', 4, 'appear', {});
-register_animation('node_15', 15, 'appear', {});
+register_animation('node_5', 1, 'appear', {});
+register_animation('node_8', 15, 'appear', {});
 
 var prev_page = 'slide039.html';
 var next_page = 'slide041.html';
 </script>
 <div id="bbslides-navi">
-Slide 40/59
+Slide 40/61
 <a href="slide039.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide041.html" onclick="next_step(); return false">NEXT</a>
@@ -62,7 +56,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="40" max="59"></progress>
+<progress id="slide-progress" value="40" max="61"></progress>
 </div>
 </body>
 </html>

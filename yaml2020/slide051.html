@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>YAML::PP - Include and Merge</title>
+<title>YAML::PP - Include other YAML Files</title>
 <link rel="prev" href="slide050.html" />
 <link rel="next" href="slide052.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,28 +18,28 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">YAML::PP - Include and Merge</h1>
-<div id="node_2"><div id="node_3" class="codebox">--- <span id="node_4" style="color: blue"># defaults.yaml</span>
-x: 1
-y: 2
-z: 3
-</div></div><br>
-<div id="node_6"><div id="node_7" class="codebox">---
-some thing:
-  &lt;&lt;:  <span id="node_8" style="color: green">!include </span><span id="node_9" style="color: blue">defaults.yaml</span>
-  foo: 1
-  bar: 2
-</div></div><br>
+<h1 id="node_1" class="bbslides-h1">YAML::PP - Include other YAML Files</h1>
+<div id="node_2" class="codebox">use YAML::PP;
+use YAML::PP::Schema::Include;
+<span id="node_3">my $include = YAML::PP::Schema::Include-&gt;new;</span>
+
+<span id="node_4">my $yp = YAML::PP-&gt;new( <span id="node_5" style="color: #44aacc">schema =&gt; [&#39;+&#39;, $include ]</span> );</span>
+
+<span id="node_6"># still needed to make the include object aware
+# of the YAML::PP object
+$include-&gt;yp($yp);</span>
+</div>
 </div>
 <script type="text/javascript">
-register_animation('node_2', 1, 'appear', {});
-register_animation('node_6', 2, 'appear', {});
+register_animation('node_3', 1, 'appear', {});
+register_animation('node_4', 2, 'appear', {});
+register_animation('node_6', 3, 'appear', {});
 
 var prev_page = 'slide050.html';
 var next_page = 'slide052.html';
 </script>
 <div id="bbslides-navi">
-Slide 51/59
+Slide 51/61
 <a href="slide050.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide052.html" onclick="next_step(); return false">NEXT</a>
@@ -48,7 +48,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="51" max="59"></progress>
+<progress id="slide-progress" value="51" max="61"></progress>
 </div>
 </body>
 </html>

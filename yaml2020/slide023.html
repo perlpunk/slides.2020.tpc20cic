@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-store" />
-<title>Implementation - Schema - Booleans</title>
+<title>Implementation - Schema</title>
 <link rel="prev" href="slide022.html" />
 <link rel="next" href="slide024.html" />
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -18,37 +18,22 @@
 <div id="test"></div>
 -->
 <div id="bbslides-slide" class="bbslides-frame">
-<h1 id="node_1" class="bbslides-h1">Implementation - Schema - Booleans</h1>
-<h2 id="node_2" class="bbslides-h2">How many values are loaded as booleans in YAML 1.1?</h2>
-
-<div id="node_3" class="codebox">
-<span id="node_4">  true  | True  | TRUE</span>
-<span id="node_5">| false | False | FALSE</span>
-<span id="node_6">| y | Y | yes | Yes | YES</span>
-<span id="node_7">| n | N | no  | No  | NO</span>
-<span id="node_8">| on  | On  | ON</span>
-<span id="node_9">| off | Off | OFF</span></div>
-<div id="node_10"><span style="font-size: 60"><b>22!</b></span><br></div>
-<div id="node_14">
-<br>
-A classic gotcha is that the country code for Norway (&#39;NO&#39;) loads as a boolean.
-</div>
+<h1 id="node_1" class="bbslides-h1">Implementation - Schema</h1>
+<ul><li id="node_3">YAML Strings don&#39;t usually need to be quoted</li><li id="node_4">...unless</li><li id="node_5">they interfere with syntax elements</li><li id="node_6"><div id="node_7" class="codebox">- &quot;- string&quot;</div></li><li id="node_8"><div id="node_9" class="codebox">- &quot;some: string&quot;</div></li><li id="node_10">or would be loaded as <b>special values</b></li></ul>
 </div>
 <script type="text/javascript">
-register_animation('node_4', 1, 'appear', {});
-register_animation('node_5', 2, 'appear', {});
-register_animation('node_6', 3, 'appear', {});
-register_animation('node_7', 4, 'appear', {});
-register_animation('node_8', 5, 'appear', {});
-register_animation('node_9', 6, 'appear', {});
-register_animation('node_10', 7, 'appear', {});
-register_animation('node_14', 8, 'appear', {});
+register_animation('node_3', 2, 'greyin', {});
+register_animation('node_4', 3, 'greyin', {});
+register_animation('node_5', 4, 'greyin', {});
+register_animation('node_6', 5, 'greyin', {});
+register_animation('node_8', 6, 'greyin', {});
+register_animation('node_10', 7, 'greyin', {});
 
 var prev_page = 'slide022.html';
 var next_page = 'slide024.html';
 </script>
 <div id="bbslides-navi">
-Slide 23/59
+Slide 23/61
 <a href="slide022.html" onclick="previous_step();return false">BACK</a>
 <a href="index.html">UP</a>
 <a href="slide024.html" onclick="next_step(); return false">NEXT</a>
@@ -57,7 +42,7 @@ next page: ( shift + page down ) | previous page: ( shift + page up ) |
 index: ( arrow-up )</span>
 
 <br>
-<progress id="slide-progress" value="23" max="59"></progress>
+<progress id="slide-progress" value="23" max="61"></progress>
 </div>
 </body>
 </html>
