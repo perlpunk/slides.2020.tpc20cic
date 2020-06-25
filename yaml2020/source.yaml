@@ -169,11 +169,11 @@ content: |
 title: YAML Tutorial
 content: |
   [title][/title]
-  [list animation="1,greyin"]
+  [list animation="1,appear"]
   [*]Most Tutorials out there have tiny mistakes or are missing stuff or are specific to YAML 1.1
   [*]So I started to write another one two weeks ago
   [*][url=https://www.yaml.info/]www.yaml.info[/url]
-  [*]The source is YAML (of course!)
+  [*]The source is written in YAML (of course!)
   [*]HTML is generated with perl (of course!)
   [/list]
 
@@ -270,6 +270,7 @@ content: |
   [title][/title]
   [list animation="1,appear"]
   [*]This works as long as you read/write the YAML with the same library/programming language
+  [*]But
   [*]YAML usage is growing
   [*]It becomes more and more necessary to process YAML with different libraries
   [*]Some YAML configuration files are even [b]generated[/b] with a library
@@ -546,7 +547,7 @@ content: |
   [title][/title]
   [codebox]
   # Try it out with this utility script!
-  % yamlpp5-load-dump < file.yaml
+  % yamlpp-load-dump < file.yaml
   [/codebox]
 
 ---
